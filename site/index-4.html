@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>contacts</title>
+<meta charset="utf-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<meta name = "format-detection" content = "telephone=no" />
+<!--CSS-->
+<link rel="stylesheet" href="css/bootstrap.css" >
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/contact-form.css">
+<link rel="stylesheet" href="fonts/font-awesome.css">
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/jquery.equalheights.js"></script> 
+<script src="js/TMForm.js"></script>
+<script src="js/modal.js"></script>  
+<script src="js/bootstrap-filestyle.js"></script> 
+<script src="js/jquery.ui.totop.js"></script>
+<!--[if lt IE 9]>
+    <div style='text-align:center' class="qwerty"><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>  
+  <![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!--header-->
+<header> 
+    <div class="container">
+        <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+            <ul class="nav sf-menu clearfix">
+                <li><a href="index.html">home<em></em></a></li>
+                <li><a href="index-1.html">about us<em></em></a></li>
+                <li><a href="index-2.html">products & services<em></em></a></li>
+                <li><a href="index-3.html">news<em></em></a></li>
+                <li class="active"><a href="index-4.html">contacts<em></em></a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+        <em class="bord1"></em>
+        <h1 class="navbar-brand navbar-brand_"><a href="index.html"><img src="img/logo.png" alt="Sohmiume"></a></h1>
+        <em class="bord2"></em>
+    </div>
+</header>
+<!--content-->
+<div class="global indent">
+    <div class="container">
+        <h4><em></em><br>COntact us</h4>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3467.527488838246!2d-95.44354899999999!3d29.64646400000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640ea5ba7b32d7b%3A0x7fece21014a1ef7a!2s4300+Town+Plaza+Dr%2C+Houston%2C+TX+77045!5e0!3m2!1sen!2sus!4v1412216873732" style="border:0"></iframe>
+        </div>
+    </div>
+    <div class="formBox">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <h4><em></em><br>Address</h4>
+                    <div class="info">
+                        <h3>4300 TOWN PlAZA DR B5,<br>
+                        HOUSTON, TX 77007.                        </h3>
+                        <p><span>E-mail:</span><a href="mailto:info@sohmiume.com">info@sohmiume.com</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    <h4><em></em><br>get in touch</h4>
+                    <form id="contact-form" action="MailHandler.php" method="post">
+                          <div class="contact-form-loader"></div>
+                          <fieldset>
+                            <label class="name form-div-1">
+                              <input type="text" name="name" placeholder="Name*:" value="" data-constraints="@Required @JustLetters"  />
+                              <span class="empty-message">*This field is required.</span>
+                              <span class="error-message">*This is not a valid name.</span>
+                            </label>
+                            <label class="email form-div-2">
+                              <input type="text" name="email" placeholder="E-mail*:" value="" data-constraints="@Required @Email" />
+                              <span class="empty-message">*This field is required.</span>
+                              <span class="error-message">*This is not a valid email.</span>
+                            </label>
+                            <label class="phone form-div-3">
+                              <input type="text" name="phone" placeholder="Telephone:" value="" data-constraints="@JustNumbers" />
+                              <span class="empty-message">*This field is required.</span>
+                              <span class="error-message">*This is not a valid phone.</span>
+                            </label>
+                            <label class="message form-div-4">
+                              <textarea name="message" placeholder="Comment*:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                              <span class="empty-message">*This field is required.</span>
+                              <span class="error-message">*The message is too short.</span>
+                            </label>
+                            <!-- <label class="recaptcha"><span class="empty-message">*This field is required.</span></label> -->
+                            <div>
+                              <a href="#" data-type="submit" class="btn-default btn1 form-btns">submit</a>
+                              <p>*required fields</p>
+                            </div>
+                          </fieldset> 
+                          <div class="modal fade response-message">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                  <h4 class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                  You message has been sent! We will be in touch soon.
+                                </div>      
+                              </div>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<footer>
+    <div class="container">
+        <strong></strong>
+        <figure><a href="index.html"><img src="img/foo_logo.png" alt=""></a></figure>
+        <p>&copy; <em id="copyright-year"></em> <span>|</span> <a href="index-5.html">Privacy policy</a></p>
+    </div>
+</footer>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tm-scripts.js"></script>
+</body>
+</html>
